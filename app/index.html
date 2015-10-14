@@ -48,6 +48,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="bower_components/polymer-themes/candy.html">
   <!-- endbuild -->
 
   <!-- will be replaced with elements/elements.vulcanized.html -->
@@ -87,6 +89,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a data-route="contact" href="/contact" on-click="onDataRouteClick">
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
+          </a>
+
+          <a data-route="theme" href="/theme" on-click="onDataRouteClick">
+            <iron-icon icon="info"></iron-icon>
+            <span>Theme</span>
           </a>
         </paper-menu>
       </paper-scroll-header-panel>
@@ -177,6 +184,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
             </section>
 
+            <section data-route="theme">
+              <paper-material elevation="1">
+                <h2 class="page-title">Theme</h2>
+                <h3 class="page-title">Buttons</h3>
+                <paper-button>Flat button</paper-button>
+                <paper-button raised>Raised button</paper-button>
+                <paper-button noink>No ripple effect</paper-button>
+                <paper-button toggles>Toggle-able button</paper-button>
+
+
+                <h3 class="page-title">Radios</h3>
+                  <h4>Enabled</h4>
+                  <div class="horizontal-section">
+                    <paper-radio-button>Oxygen</paper-radio-button>
+                    <paper-radio-button>Carbon</paper-radio-button>
+                    <paper-radio-button checked>Hydrogen</paper-radio-button>
+                    <paper-radio-button checked>Nitrogen</paper-radio-button>
+                    <paper-radio-button checked>Calcium</paper-radio-button>
+                  </div>
+                  <h4>Disabled</h4>
+                  <div class="horizontal-section">
+                    <paper-radio-button disabled>Oxygen</paper-radio-button>
+                    <paper-radio-button disabled>Carbon</paper-radio-button>
+                    <paper-radio-button checked disabled>Hydrogen</paper-radio-button>
+                    <paper-radio-button checked disabled>Nitrogen</paper-radio-button>
+                    <paper-radio-button checked disabled>Calcium</paper-radio-button>
+                  </div>
+              </paper-material>
+            </section>
           </iron-pages>
         </div>
       </paper-scroll-header-panel>
